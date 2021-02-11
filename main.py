@@ -1,3 +1,5 @@
+from flask import Flask
+
 def guessing(min_num, max_num):
     """
     Function is computing next guest
