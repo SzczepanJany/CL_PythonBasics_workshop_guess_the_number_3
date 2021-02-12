@@ -21,7 +21,7 @@ def guess():
             
             <H1>"Think of a number from {Computer_guess_min} to {Computer_guess_max} and I will guess it in max ten moves."</H1> 
             <br><br>
-            <label for="Computer_guess">Im guessing: {result}</label>
+            <label for="Computer_guess">I'm guessing: {result}</label>
             <input type=hidden id="Computer_guess_min" name="Computer_guess_min" value={Computer_guess_min}><br><br>        
             <input type=hidden id="Computer_guess_max" name="Computer_guess_max" value={Computer_guess_max}><br><br>        
             <button name="button_answer" value = 1 type="submit">Too much</button>
@@ -39,16 +39,14 @@ def guess():
         result = guessing(Computer_guess_min,Computer_guess_max)
         if status == 1:
             page = f'''
-            {answer_value}
-            {Computer_guess_min}, {Computer_guess_max}, {status}
             <br>
             <H1>I won!!</H1>
-            <H2> {result} </H2>
+            <H2>My answer: {result} </H2>
             '''
         else:    
             page = f'''
              <form action="/" method="POST">
-            <label for="Computer_guess">Im guessing: {result}</label>
+            <label for="Computer_guess">I'm guessing: {result}</label>
             <input type=hidden id="Computer_guess_min" name="Computer_guess_min" value={Computer_guess_min}><br><br>        
             <input type=hidden id="Computer_guess_max" name="Computer_guess_max" value={Computer_guess_max}><br><br>        
             <input type=hidden id="result" name="result" value={result}><br><br> 
